@@ -13,7 +13,7 @@ clrprint("The IATA is the trade assosciation of the world's airlines representin
 clrprint("IATA supports many aviation activity and help formulate industry policy on critical aviation issues.",clr='y')
 print('--------------------------------------------------------------------------')
 
-df=pd.read_csv("C:\\Users\\AKSHAT\\Desktop\\IP Project\\iatafinaldog.csv",encoding="ISO-8859-1")
+df=pd.read_csv("C:\\Users\\AKSHAT\\Documents\\GitHub\\IATA-Project\\IP Project\\iatafinaldog.csv")
 def append_list_as_row(file_name, list_of_elem):
     # Open file in append mode
     with open(file_name, 'a+', newline='') as write_obj:
@@ -44,7 +44,7 @@ while True:
            newrow=[newcode,newairport,newlocation,newcountry]
            row_contents = [newcode,newairport,newlocation,newcountry]
            append_list_as_row('iatafinaldog.csv', row_contents)
-           df=pd.read_csv("C:\\Users\\AKSHAT\\Desktop\\IP Project\\iatafinaldog.csv",encoding="ISO-8859-1")
+           df=pd.read_csv("C:\\Users\\AKSHAT\\Documents\\GitHub\\IATA-Project\\IP Project\\iatafinaldog.csv")
            
         elif mal=='REMOVE':
             del_iata=input(str('Insert the iataCode to remove:'))
@@ -57,7 +57,7 @@ while True:
                        if yon=='YES':
                                  df=df.drop([row_index],axis=0)
                                  clrprint(row_index,'has been deleted',clr='y')
-                                 df.to_csv("C:\\Users\\Akshat\\Desktop\\IP Project\\iatafinaldog.csv",index=False)
+                                 df.to_csv("C:\\Users\\Akshat\\Documents\\GitHub\\IATA-Project\\IP Project\\iatafinaldog.csv",index=False)
                        else:
                            clrprint('Nothing has been removed',clr='r')
                            break
@@ -104,7 +104,7 @@ while True:
             Cod=clrinput("\nEnter the IATA Code of the airport:",clr='m')
             Cod=Cod.upper()
             if Cod=='DXB':
-                data=pd.read_csv("C:\\Users\\AKSHAT\\Desktop\\IP Project\\Dubai.csv")
+                data=pd.read_csv("C:\\Users\\AKSHAT\\Documents\\GitHub\\IATA-Project\\IP Project\\Dubai.csv")
                 Year=data['Year']
                 Passengers=data['Passengers']
                 pl.xlabel('Year')
@@ -115,7 +115,7 @@ while True:
                 print(data)
                 pl.show()
             elif Cod=='ATL':
-                data=pd.read_csv("C:\\Users\\AKSHAT\\Desktop\\IP Project\\Atlanta.csv")
+                data=pd.read_csv("C:\\Users\\AKSHAT\\Documents\\GitHub\\IATA-Project\\IP Project\\Atlanta.csv")
                 Year=data['Year']
                 Passengers=data['Passengers']
                 pl.xlabel('Year')
@@ -126,7 +126,7 @@ while True:
                 print(data)
                 pl.show()
             elif Cod=='PEK':
-                data=pd.read_csv("C:\\Users\\AKSHAT\\Desktop\\IP Project\\Beijing.csv")
+                data=pd.read_csv("C:\\Users\\AKSHAT\\Documents\\GitHub\\IATA-Project\\IP Project\\Beijing.csv")
                 Year=data['Year']
                 Passengers=data['Passengers']
                 pl.xlabel('Year')
@@ -137,7 +137,7 @@ while True:
                 print(data)
                 pl.show()
             elif Cod=='HND':
-                data=pd.read_csv("C:\\Users\\AKSHAT\\Desktop\\IP Project\\Tokyo.csv")
+                data=pd.read_csv("C:\\Users\\AKSHAT\\Documents\\GitHub\\IATA-Project\\IP Project\\Tokyo.csv")
                 Year=data['Year']
                 Passengers=data['Passengers']
                 pl.xlabel('Year')
@@ -148,7 +148,7 @@ while True:
                 print(data)
                 pl.show()
             elif Cod=='LAX':
-                data=pd.read_csv("C:\\Users\\AKSHAT\\Desktop\\IP Project\\Los Angeles.csv")
+                data=pd.read_csv("C:\\Users\\AKSHAT\\Documents\\GitHub\\IATA-Project\\IP Project\\Los Angeles.csv")
                 Year=data['Year']
                 Passengers=data['Passengers']
                 pl.xlabel('Year')
@@ -159,7 +159,7 @@ while True:
                 print(data)
                 pl.show()
             elif Cod=='ORD':
-                data=pd.read_csv("C:\\Users\\AKSHAT\\Desktop\\IP Project\\Chicago.csv")
+                data=pd.read_csv("C:\\Users\\AKSHAT\\Documents\\GitHub\\IATA-Project\\IP Project\\Chicago.csv")
                 Year=data['Year']
                 Passengers=data['Passengers']
                 pl.xlabel('Year')
@@ -170,7 +170,7 @@ while True:
                 print(data)
                 pl.show()
             elif Cod=='LHR':
-                data=pd.read_csv("C:\\Users\\AKSHAT\\Desktop\\IP Project\\London.csv")
+                data=pd.read_csv("C:\\Users\\AKSHAT\\Documents\\GitHub\\IATA-Project\\IP Project\\London.csv")
                 Year=data['Year']
                 Passengers=data['Passengers']
                 pl.xlabel('Year')
@@ -181,7 +181,7 @@ while True:
                 print(data)
                 pl.show()
             elif Cod=='HKG':
-                data=pd.read_csv("C:\\Users\\AKSHAT\\Desktop\\IP Project\\Hong Kong.csv")
+                data=pd.read_csv("C:\\Users\\AKSHAT\\Documents\\GitHub\\IATA-Project\\IP Project\\Hong Kong.csv")
                 Year=data['Year']
                 Passengers=data['Passengers']
                 pl.xlabel('Year')
@@ -192,7 +192,7 @@ while True:
                 print(data)
                 pl.show()
             elif Cod=='PVG':
-                data=pd.read_csv("C:\\Users\\AKSHAT\\Desktop\\IP Project\\Shangai.csv")
+                data=pd.read_csv("C:\\Users\\AKSHAT\\Documents\\GitHub\\IATA-Project\\IP Project\\Shangai.csv")
                 Year=data['Year']
                 Passengers=data['Passengers']
                 pl.xlabel('Year')
@@ -203,7 +203,7 @@ while True:
                 print(data)
                 pl.show()
             elif Cod=='CDG':
-                data=pd.read_csv("C:\\Users\\AKSHAT\\Desktop\\IP Project\\Paris.csv")
+                data=pd.read_csv("C:\\Users\\AKSHAT\\Documents\\GitHub\\IATA-Project\\IP Project\\Paris.csv")
                 Year=data['Year']
                 Passengers=data["Passengers"]
                 pl.xlabel("Year")
@@ -221,7 +221,7 @@ while True:
                 continue
 #######################################################################################################################################################################
     elif opt == '3':
-        dd =pd.read_csv("C:\\Users\\AKSHAT\\Desktop\\IP Project\\pie.csv",encoding="ISO-8859-1")
+        dd =pd.read_csv("C:\\Users\\AKSHAT\\Documents\\GitHub\\IATA-Project\\IP Project\\pie.csv",encoding="ISO-8859-1")
         csfont = {'fontname':'Comic Sans MS'}
         lab=dd['Category']
         s = (0.05, 0.2, 0.2, 0.2,0.2,0.2)
